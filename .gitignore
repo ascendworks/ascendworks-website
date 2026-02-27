@@ -1,0 +1,46 @@
+# Temporary files
+.tmp/
+*.tmp
+
+# Environment
+.env
+.env.local
+.env.*
+
+# OS files
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editor
+.vscode/
+*.swp
+*~
+
+# Python cache
+__pycache__/
+*.pyc
+
+# Node
+node_modules/
+
+# Saved webpage assets (not part of the AscendWorks site)
+*.js.download
+*.css.download
+*.html.download
+saved_resource.html
+controller*.html
+controller-with-preconnect*.html
+inner.html
+css
+css(*)
+js
+f.txt
+f(*).txt
+*.download
+m-outer-*.js.download
+m-outer-*.html
+d3e383b9ef67ddcb.css
+
+# Claude memory
+.claude/
