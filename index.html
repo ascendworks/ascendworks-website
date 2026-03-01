@@ -1031,7 +1031,15 @@
       gap: 48px;
       margin-bottom: 56px;
     }
-    .footer-brand .nav-logo { margin-bottom: 16px; }
+    .footer-brand .nav-logo { margin-bottom: 16px; align-items: flex-start; }
+    /* Footer logo: capped at native PNG resolution (250px) to prevent pixelation */
+    .footer-brand .nav-logo img {
+      width: 250px;
+      height: 250px;
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      border-radius: 16px;
+    }
     .footer-brand p {
       font-size: 0.875rem;
       color: var(--text-muted);
