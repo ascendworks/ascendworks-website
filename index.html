@@ -3,8 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>AscendWorks | Enterprise Digital Transformation</title>
-  <meta name="description" content="AscendWorks delivers enterprise-grade digital transformation across Oil & Gas, Banking, Manufacturing, Media, and Retail. Trusted by Fortune 1000 companies." />
+  <title>AscendWorks | ServiceNow Agentic AI & Enterprise Transformation</title>
+  <meta name="description" content="AscendWorks is a certified ServiceNow Build Partner delivering Agentic AI, Now Assist, and enterprise workflow automation for Fortune 1000 companies across Oil & Gas, Banking, Manufacturing, and Retail." />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@600;700;800;900&display=swap" rel="stylesheet" />
@@ -1180,6 +1180,127 @@
       .hero-actions { flex-direction: column; }
       .btn-primary, .btn-secondary { justify-content: center; }
     }
+
+    /* =========================================================
+       AGENTIC AI SECTION
+    ========================================================= */
+    #agentic-ai { background: rgba(13,30,53,0.3); }
+    .ai-caps-grid {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 20px;
+      margin-bottom: 32px;
+    }
+    .ai-cap-card {
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius-lg);
+      padding: 28px 24px;
+      backdrop-filter: blur(16px);
+      transition: border-color var(--transition), transform var(--transition), box-shadow var(--transition);
+      position: relative;
+      overflow: hidden;
+    }
+    .ai-cap-card::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0;
+      height: 2px;
+      background: linear-gradient(90deg, var(--blue), var(--gold));
+      opacity: 0;
+      transition: opacity var(--transition);
+    }
+    .ai-cap-card:hover {
+      border-color: rgba(26,110,255,0.3);
+      transform: translateY(-4px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.3);
+    }
+    .ai-cap-card:hover::before { opacity: 1; }
+    .ai-cap-icon { font-size: 1.8rem; margin-bottom: 12px; }
+    .ai-cap-badge {
+      display: inline-block;
+      font-size: 0.68rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--blue-bright);
+      background: rgba(26,110,255,0.1);
+      border: 1px solid rgba(26,110,255,0.2);
+      border-radius: 100px;
+      padding: 3px 10px;
+      margin-bottom: 12px;
+    }
+    .ai-cap-card h3 {
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1rem;
+      font-weight: 700;
+      color: var(--white);
+      margin-bottom: 10px;
+      line-height: 1.35;
+    }
+    .ai-cap-card p {
+      font-size: 0.85rem;
+      color: var(--text-muted);
+      line-height: 1.7;
+      margin-bottom: 16px;
+    }
+    .ai-cap-stat {
+      font-size: 0.78rem;
+      font-weight: 600;
+      color: var(--gold);
+      padding-top: 12px;
+      border-top: 1px solid var(--border);
+    }
+    .platform-releases {
+      display: flex;
+      align-items: center;
+      gap: 16px;
+      background: var(--glass);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 16px 24px;
+      backdrop-filter: blur(16px);
+      flex-wrap: wrap;
+    }
+    .pr-label {
+      font-size: 0.72rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 0.12em;
+      color: var(--text-muted);
+      white-space: nowrap;
+      margin-right: 4px;
+    }
+    .pr-items { display: flex; gap: 8px; flex-wrap: wrap; }
+    .pr-item {
+      display: flex;
+      align-items: center;
+      gap: 6px;
+      font-size: 0.82rem;
+      font-weight: 600;
+      color: var(--text-muted);
+      background: rgba(255,255,255,0.03);
+      border: 1px solid var(--border);
+      border-radius: 6px;
+      padding: 6px 12px;
+    }
+    .pr-item span {
+      font-size: 0.7rem;
+      font-weight: 400;
+      opacity: 0.6;
+    }
+    .pr-item.active {
+      color: var(--white);
+      background: rgba(26,110,255,0.1);
+      border-color: rgba(26,110,255,0.3);
+    }
+    .pr-item.active span { color: var(--blue-bright); opacity: 1; }
+    @media (max-width: 1024px) {
+      .ai-caps-grid { grid-template-columns: repeat(2, 1fr); }
+    }
+    @media (max-width: 768px) {
+      .ai-caps-grid { grid-template-columns: 1fr; }
+    }
   </style>
 </head>
 <body>
@@ -1192,6 +1313,7 @@
   <button id="mobile-nav-close" aria-label="Close menu">&#x2715;</button>
   <a href="#hero" onclick="closeMobileNav()">Home</a>
   <a href="#about" onclick="closeMobileNav()">About</a>
+  <a href="#agentic-ai" onclick="closeMobileNav()">Agentic AI</a>
   <a href="#services" onclick="closeMobileNav()">Services</a>
   <a href="#portfolio" onclick="closeMobileNav()">Portfolio</a>
   <a href="#testimonials" onclick="closeMobileNav()">Testimonials</a>
@@ -1207,6 +1329,7 @@
       </a>
       <ul class="nav-links" role="list">
         <li><a href="#about">About</a></li>
+        <li><a href="#agentic-ai">Agentic AI</a></li>
         <li><a href="#services">Services</a></li>
         <li><a href="#portfolio">Portfolio</a></li>
         <li><a href="#testimonials">Testimonials</a></li>
@@ -1230,12 +1353,12 @@
           A ServiceNow Build Partner
         </div>
         <h1 class="hero-title reveal reveal-delay-1">
-          Enterprise Digital<br>
-          Transformation<br>
-          <span class="highlight">at Scale</span>
+          Agentic AI.<br>
+          Intelligent Workflows.<br>
+          <span class="highlight">Real Results.</span>
         </h1>
         <p class="hero-desc reveal reveal-delay-2">
-          AscendWorks delivers mission-critical digital transformation across the world's most complex industries. From Oil &amp; Gas to Banking, we turn operational challenges into competitive advantages.
+          AscendWorks is a certified ServiceNow Build Partner — deploying Agentic AI, Now Assist, and autonomous workflow orchestration for Fortune 1000 organizations across the world's most demanding industries.
         </p>
         <div class="hero-actions reveal reveal-delay-3">
           <a href="#services" class="btn-primary">
@@ -1264,30 +1387,30 @@
       <!-- Right: visual card -->
       <div class="hero-visual reveal reveal-delay-2">
         <div class="hero-card">
-          <div class="hero-card-label">Industry Verticals</div>
+          <div class="hero-card-label">Now Platform · Yokohama Release</div>
           <div class="industry-pills">
-            <span class="industry-pill"><span class="pill-icon">🛢️</span> Oil &amp; Gas</span>
-            <span class="industry-pill"><span class="pill-icon">🏦</span> Banking</span>
-            <span class="industry-pill"><span class="pill-icon">⚙️</span> Manufacturing</span>
-            <span class="industry-pill"><span class="pill-icon">📡</span> Media</span>
-            <span class="industry-pill"><span class="pill-icon">🛍️</span> Retail</span>
+            <span class="industry-pill"><span class="pill-icon">🤖</span> AI Agent Orchestrator</span>
+            <span class="industry-pill"><span class="pill-icon">⚡</span> Now Assist</span>
+            <span class="industry-pill"><span class="pill-icon">🏗️</span> AI Agent Studio</span>
+            <span class="industry-pill"><span class="pill-icon">🛡️</span> AI Control Tower</span>
+            <span class="industry-pill"><span class="pill-icon">🔗</span> Workflow Data Fabric</span>
           </div>
           <div class="metric-row">
             <div class="metric-card">
-              <div class="metric-value gold">$4.2B</div>
-              <div class="metric-desc">Client value delivered</div>
+              <div class="metric-value gold">90%+</div>
+              <div class="metric-desc">L1 requests resolved autonomously</div>
             </div>
             <div class="metric-card">
-              <div class="metric-value blue">40%</div>
-              <div class="metric-desc">Avg. cost reduction</div>
+              <div class="metric-value blue">52%</div>
+              <div class="metric-desc">Faster case resolution with AI</div>
             </div>
             <div class="metric-card">
               <div class="metric-value">500+</div>
-              <div class="metric-desc">Projects completed</div>
+              <div class="metric-desc">ServiceNow workflows automated</div>
             </div>
             <div class="metric-card">
-              <div class="metric-value gold">24/7</div>
-              <div class="metric-desc">Managed support</div>
+              <div class="metric-value gold">98%</div>
+              <div class="metric-desc">Client renewal rate</div>
             </div>
           </div>
         </div>
@@ -1336,52 +1459,104 @@
       <div class="about-text">
         <span class="section-label reveal">Who We Are</span>
         <h2 id="about-heading" class="section-title reveal reveal-delay-1">
-          The Enterprise Partner<br>Built for Complexity
+          The ServiceNow Build Partner<br>Built for Your Industry
         </h2>
         <div class="reveal reveal-delay-2">
-          <p>AscendWorks is a premier enterprise technology consultancy serving Fortune 1000 organizations across the world's most demanding industries. We specialize in <strong>end-to-end digital transformation</strong>—combining strategic consulting, platform implementation, and managed services to deliver measurable results.</p>
-          <p>Founded on the principle that technology should amplify human capability, we bring together <strong>deep industry expertise</strong> and battle-tested methodologies to solve problems that generalist firms cannot.</p>
+          <p>AscendWorks is a certified <strong>ServiceNow Build Partner</strong> — one of a select group of firms authorized to create and publish AI agents, applications, and workflow solutions directly on the Now Platform. We serve Fortune 1000 organizations across the world's most demanding industries, delivering end-to-end ServiceNow implementations, Agentic AI deployments, and managed services that generate measurable business outcomes.</p>
+          <p>Our team of 1,200+ certified ServiceNow specialists spans every module — from ITSM and CSM to <strong>AI Agent Studio, Now Assist, and Workflow Data Fabric</strong> — bringing deep platform expertise and vertical-specific playbooks that generalist firms simply cannot match.</p>
         </div>
         <div class="about-feature-list reveal reveal-delay-3">
           <div class="about-feature">
-            <div class="feature-icon" aria-hidden="true">🎯</div>
+            <div class="feature-icon" aria-hidden="true">🤖</div>
             <div class="feature-text">
-              <strong>Industry-First Approach</strong>
-              <span>Solutions designed around your vertical, not retrofitted from generic templates.</span>
+              <strong>Agentic AI Specialists</strong>
+              <span>From AI Agent Orchestrator to AI Control Tower governance, we deploy autonomous AI solutions that resolve enterprise challenges without human intervention.</span>
             </div>
           </div>
           <div class="about-feature">
             <div class="feature-icon" aria-hidden="true">🔒</div>
             <div class="feature-text">
-              <strong>Enterprise Security &amp; Compliance</strong>
-              <span>SOC 2 Type II, ISO 27001, and sector-specific regulatory frameworks built in from day one.</span>
+              <strong>Compliance-First by Design</strong>
+              <span>SOC 2 Type II, ISO 27001, and sector-specific regulatory frameworks embedded into every ServiceNow implementation — with AI governance built in from day one.</span>
             </div>
           </div>
           <div class="about-feature">
             <div class="feature-icon" aria-hidden="true">⚡</div>
             <div class="feature-text">
               <strong>Accelerated Time-to-Value</strong>
-              <span>Proprietary delivery frameworks that compress implementation timelines by up to 40%.</span>
+              <span>Proprietary delivery frameworks compress ServiceNow deployments by up to 40% — with AI agents live in weeks, not quarters.</span>
             </div>
           </div>
         </div>
       </div>
       <div class="about-visual reveal reveal-delay-2">
         <div class="about-card">
-          <div class="card-accent">18+</div>
-          <h3>Years of Enterprise Excellence</h3>
-          <p>From our first engagement with a global energy major to today's portfolio of 250+ active client relationships, we have consistently delivered transformational outcomes at scale.</p>
+          <div class="card-accent">Build Partner</div>
+          <h3>ServiceNow Certified</h3>
+          <p>As a certified ServiceNow Build Partner, we have direct access to AI Agent Studio, Now Platform developer tools, and the ServiceNow Store — giving clients a first-mover advantage in enterprise Agentic AI.</p>
         </div>
         <div class="about-card">
-          <div class="card-accent">5</div>
-          <h3>Core Industry Verticals</h3>
-          <p>Oil &amp; Gas, Banking, Manufacturing, Media, and Retail—each with a dedicated practice, certified specialists, and proven implementation playbooks tailored to your sector's unique demands.</p>
+          <div class="card-accent">1,200+</div>
+          <h3>ServiceNow Specialists</h3>
+          <p>Certified across every Now Platform module — ITSM, CSM, HRSD, SecOps, AI Agent Orchestrator, and Workflow Data Fabric — with dedicated practices across five industry verticals.</p>
         </div>
         <div class="about-card">
-          <div class="card-accent">Global</div>
-          <h3>Delivery Reach</h3>
-          <p>Offices across North America, Europe, and Asia-Pacific, with 1,200+ certified consultants delivering seamless support across time zones and regulatory jurisdictions.</p>
+          <div class="card-accent">Yokohama</div>
+          <h3>Always on the Current Release</h3>
+          <p>Our teams are trained and certified on the latest Now Platform release — bringing Agentic AI governance, AI Agent Studio, and Workflow Data Fabric to production deployments today.</p>
         </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ===== AGENTIC AI ===== -->
+<section id="agentic-ai" class="section" aria-labelledby="ai-heading">
+  <div class="container">
+    <span class="section-label reveal">Trending Now on the Now Platform</span>
+    <h2 id="ai-heading" class="section-title reveal reveal-delay-1">
+      ServiceNow Agentic AI:<br>Put AI to Work
+    </h2>
+    <p class="section-subtitle reveal reveal-delay-2">
+      The Now Platform's Yokohama release marks a new era — autonomous AI agents that sense context, plan actions, and execute multi-step workflows across your enterprise without human intervention. We build, deploy, and govern these capabilities for the world's most demanding industries.
+    </p>
+    <div class="ai-caps-grid">
+      <div class="ai-cap-card reveal">
+        <div class="ai-cap-icon" aria-hidden="true">🤖</div>
+        <div class="ai-cap-badge">AI Agent Orchestrator</div>
+        <h3>Multi-Agent Coordination</h3>
+        <p>Deploy coordinated teams of AI agents across IT, HR, Finance, and Customer Service — autonomously resolving complex enterprise challenges without human handoffs between departments.</p>
+        <div class="ai-cap-stat">90%+ of L1 IT requests resolved autonomously</div>
+      </div>
+      <div class="ai-cap-card reveal reveal-delay-1">
+        <div class="ai-cap-icon" aria-hidden="true">⚡</div>
+        <div class="ai-cap-badge">Now Assist</div>
+        <h3>GenAI Across Every Workflow</h3>
+        <p>Embed generative AI into ITSM, CSM, HR Service Delivery, and Security Operations — with custom Skill Kit extensions and industry-specific prompts built for your operational reality.</p>
+        <div class="ai-cap-stat">52% faster complex case resolution with Now Assist</div>
+      </div>
+      <div class="ai-cap-card reveal reveal-delay-2">
+        <div class="ai-cap-icon" aria-hidden="true">🏗️</div>
+        <div class="ai-cap-badge">AI Agent Studio</div>
+        <h3>Custom Agent Development</h3>
+        <p>As a ServiceNow Build Partner, we create industry-specific AI agents using AI Agent Studio — published to the ServiceNow Store and tailored precisely to your sector's unique workflow demands.</p>
+        <div class="ai-cap-stat">Custom agents live in weeks, not quarters</div>
+      </div>
+      <div class="ai-cap-card reveal reveal-delay-3">
+        <div class="ai-cap-icon" aria-hidden="true">🛡️</div>
+        <div class="ai-cap-badge">AI Control Tower</div>
+        <h3>Enterprise AI Governance</h3>
+        <p>Centralize visibility and control over every AI agent — ServiceNow-native and third-party — with built-in guardrails, audit trails, and compliance controls your CIO and regulators can trust.</p>
+        <div class="ai-cap-stat">78% of CIOs cite AI governance as their top priority</div>
+      </div>
+    </div>
+    <div class="platform-releases reveal reveal-delay-4">
+      <div class="pr-label">Now Platform · Current Release</div>
+      <div class="pr-items">
+        <div class="pr-item active">Yokohama <span>2026</span></div>
+        <div class="pr-item">Zurich <span>2025</span></div>
+        <div class="pr-item">Xanadu <span>2024</span></div>
+        <div class="pr-item">Washington DC <span>2024</span></div>
       </div>
     </div>
   </div>
@@ -1393,10 +1568,10 @@
     <div class="services-intro">
       <span class="section-label reveal">Our Expertise</span>
       <h2 id="services-heading" class="section-title reveal reveal-delay-1">
-        Deep Expertise Across<br>Five Critical Verticals
+        ServiceNow Solutions Across<br>Your Industry
       </h2>
       <p class="section-subtitle reveal reveal-delay-2">
-        We go beyond surface-level consulting. Each practice is built with vertical-specific frameworks, certified talent, and proven delivery models that address the unique operational and regulatory realities of your industry.
+        Each practice combines deep vertical expertise with the full power of the Now Platform — from ITSM and AI Agent Orchestration to Now Assist, Workflow Data Fabric, and custom AI agent development tailored to your sector's unique demands.
       </p>
     </div>
     <div class="services-grid">
@@ -1405,12 +1580,12 @@
         <div class="service-icon" aria-hidden="true">🛢️</div>
         <h3>Oil &amp; Gas</h3>
         <span class="service-vertical-tag">Energy Sector</span>
-        <p>Digitizing upstream, midstream, and downstream operations for global energy majors. We optimize asset performance, ensure HSE compliance, and drive operational efficiency across the full value chain.</p>
+        <p>Transform upstream, midstream, and downstream operations with ServiceNow Field Service Management, Asset Management, and AI Agent-driven safety compliance. We automate HSE workflows, predictive maintenance, and real-time operational visibility across global energy portfolios.</p>
         <ul class="service-features" aria-label="Oil & Gas capabilities">
-          <li class="service-feature">Asset Performance Management</li>
-          <li class="service-feature">HSE &amp; Regulatory Compliance Automation</li>
-          <li class="service-feature">Field Operations Digitization</li>
-          <li class="service-feature">Predictive Maintenance &amp; IoT Integration</li>
+          <li class="service-feature">ServiceNow Field Service Management</li>
+          <li class="service-feature">AI-Driven HSE Compliance Automation</li>
+          <li class="service-feature">Asset Performance &amp; Predictive Maintenance</li>
+          <li class="service-feature">Agentic Incident Resolution (Now Assist)</li>
         </ul>
       </div>
       <!-- Banking -->
@@ -1418,12 +1593,12 @@
         <div class="service-icon" aria-hidden="true">🏦</div>
         <h3>Banking &amp; Financial Services</h3>
         <span class="service-vertical-tag">Financial Sector</span>
-        <p>Transforming financial institutions with technology that accelerates compliance, enhances customer experience, and enables innovation at enterprise scale—without compromising on security or regulatory adherence.</p>
+        <p>Deploy ServiceNow ITSM, Risk &amp; Compliance, and Customer Service Management for institutions managing complex regulatory environments. Our Agentic AI implementations reduce compliance burden by 41% while accelerating customer resolution times with Now Assist.</p>
         <ul class="service-features" aria-label="Banking capabilities">
-          <li class="service-feature">Core Banking Modernization</li>
-          <li class="service-feature">Risk &amp; Compliance Platforms</li>
-          <li class="service-feature">Customer Service Automation</li>
-          <li class="service-feature">Fraud Detection &amp; Prevention</li>
+          <li class="service-feature">ServiceNow Risk &amp; Compliance Automation</li>
+          <li class="service-feature">AI Agent-Powered ITSM at Scale</li>
+          <li class="service-feature">Customer Service AI (Now Assist CSM)</li>
+          <li class="service-feature">Fraud Case Management Orchestration</li>
         </ul>
       </div>
       <!-- Manufacturing -->
@@ -1431,12 +1606,12 @@
         <div class="service-icon" aria-hidden="true">⚙️</div>
         <h3>Manufacturing</h3>
         <span class="service-vertical-tag">Industrial Sector</span>
-        <p>Connecting shop floors to boardrooms with Industry 4.0 solutions that improve throughput, reduce waste, and create intelligent, responsive supply chains for global manufacturers.</p>
+        <p>Connect shop floors to enterprise systems with ServiceNow Asset Management, Order Management, and AI-driven service operations. Workflow Data Fabric integrations surface real-time ERP and MES data into Now Platform workflows — enabling proactive, autonomous operations.</p>
         <ul class="service-features" aria-label="Manufacturing capabilities">
-          <li class="service-feature">Smart Factory &amp; Industry 4.0</li>
-          <li class="service-feature">Supply Chain Visibility</li>
-          <li class="service-feature">Quality Management Systems</li>
-          <li class="service-feature">ERP Integration &amp; Optimization</li>
+          <li class="service-feature">ServiceNow Asset &amp; Operations Management</li>
+          <li class="service-feature">Workflow Data Fabric / ERP Integration</li>
+          <li class="service-feature">AI Agent-Driven Quality Management</li>
+          <li class="service-feature">Supply Chain Visibility &amp; Automation</li>
         </ul>
       </div>
       <!-- Media -->
@@ -1444,12 +1619,12 @@
         <div class="service-icon" aria-hidden="true">📡</div>
         <h3>Media &amp; Entertainment</h3>
         <span class="service-vertical-tag">Media Sector</span>
-        <p>Empowering media companies to accelerate content production, optimize distribution workflows, and deliver exceptional audience experiences across every platform and device.</p>
+        <p>Automate content production workflows, digital rights management, and multi-platform distribution with ServiceNow's Workflow Data Fabric and Now Assist. From broadcast to streaming, we build intelligent content supply chains that eliminate manual handoffs and accelerate time-to-air.</p>
         <ul class="service-features" aria-label="Media capabilities">
-          <li class="service-feature">Content Workflow Automation</li>
-          <li class="service-feature">Digital Rights Management</li>
-          <li class="service-feature">Audience Analytics &amp; Personalization</li>
-          <li class="service-feature">Multi-Platform Distribution</li>
+          <li class="service-feature">Content Workflow Automation (ServiceNow)</li>
+          <li class="service-feature">Now Assist for Media Operations</li>
+          <li class="service-feature">Digital Rights &amp; Compliance Management</li>
+          <li class="service-feature">Multi-Platform Distribution Orchestration</li>
         </ul>
       </div>
       <!-- Retail -->
@@ -1457,12 +1632,12 @@
         <div class="service-icon" aria-hidden="true">🛍️</div>
         <h3>Retail &amp; Commerce</h3>
         <span class="service-vertical-tag">Retail Sector</span>
-        <p>Unifying the customer journey across channels, optimizing inventory intelligence, and enabling the agile retail operations that modern consumers demand—from storefronts to fulfillment centers.</p>
+        <p>Unify customer and store operations on ServiceNow CSM with AI-powered case management and Now Assist. Our Agentic AI deployments autonomously handle 80%+ of customer inquiries — freeing your teams to focus on high-value interactions across every channel and location.</p>
         <ul class="service-features" aria-label="Retail capabilities">
-          <li class="service-feature">Omnichannel Service Management</li>
-          <li class="service-feature">Inventory &amp; Demand Intelligence</li>
-          <li class="service-feature">Customer Experience Platforms</li>
-          <li class="service-feature">Retail Operations Automation</li>
+          <li class="service-feature">ServiceNow CSM with Now Assist AI</li>
+          <li class="service-feature">Omnichannel Service Orchestration</li>
+          <li class="service-feature">AI Agent-Powered Case Deflection</li>
+          <li class="service-feature">Store Operations &amp; Employee Service Management</li>
         </ul>
       </div>
     </div>
@@ -1488,7 +1663,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Oil &amp; Gas</span>
           <h3>Field Operations Digitization for Global Energy Major</h3>
-          <p>Deployed an enterprise-wide IoT and asset management platform across 47 offshore rigs, eliminating paper-based processes and enabling real-time operational visibility.</p>
+          <p>Deployed ServiceNow Field Service Management and Asset Management across 47 offshore rigs, replacing paper-based HSE processes with AI-driven compliance workflows and real-time operational visibility.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">67%</div>
@@ -1513,7 +1688,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Banking</span>
           <h3>ITSM Transformation for Top-5 U.S. Bank</h3>
-          <p>Consolidated legacy service management systems into a unified ServiceNow platform, enabling 28,000 employees to access enterprise services through a single, intuitive portal.</p>
+          <p>Consolidated legacy ITSM systems onto a unified ServiceNow platform with Now Assist AI, enabling 28,000 employees to access enterprise services through a single intelligent portal — with AI agents autonomously handling 73% of L1 service requests.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">54%</div>
@@ -1538,7 +1713,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Manufacturing</span>
           <h3>Smart Factory Rollout for Automotive OEM</h3>
-          <p>Implemented Industry 4.0 quality management and connected worker solutions across 12 global assembly plants, driving significant improvements in first-pass yield and throughput.</p>
+          <p>Implemented ServiceNow Asset Management and Workflow Data Fabric across 12 global assembly plants, connecting shop floor to enterprise ERP in real time. AI-driven quality management and connected worker workflows produced measurable first-pass yield improvements.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">38%</div>
@@ -1563,7 +1738,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Logistics</span>
           <h3>Content Supply Chain Automation for Global Shipping Company</h3>
-          <p>Redesigned the end-to-end supply chain and delivery workflow for a global shipping group, reducing time-to-delivery for freight operations and eliminating costly manual handoffs.</p>
+          <p>Deployed ServiceNow Workflow Data Fabric and AI Agent Orchestrator for a global shipping group, creating an autonomous coordination layer that eliminates costly manual handoffs across carrier, warehouse, and customs workflows.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">72%</div>
@@ -1588,7 +1763,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Retail</span>
           <h3>Omnichannel Service Platform for Global Retailer</h3>
-          <p>Built a unified customer and employee service experience across 3,200 store locations and 18 e-commerce markets, creating a single view of every service interaction at enterprise scale.</p>
+          <p>Built a unified ServiceNow CSM platform with Now Assist AI across 3,200 store locations and 18 e-commerce markets. AI agents now autonomously resolve 80% of customer service inquiries — elevating CSAT and freeing associates for high-value interactions.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">45%</div>
@@ -1613,7 +1788,7 @@
         <div class="portfolio-body">
           <span class="portfolio-tag">Banking</span>
           <h3>Regulatory Compliance Automation for Investment Bank</h3>
-          <p>Engineered an automated compliance monitoring and reporting system that reduced manual audit hours by 80% and ensured 100% on-time regulatory filings across 14 jurisdictions.</p>
+          <p>Engineered a ServiceNow Risk &amp; Compliance platform with AI-driven monitoring that reduced manual audit hours by 80% and ensured 100% on-time regulatory filings across 14 jurisdictions — proactively flagging anomalies before they become compliance risks.</p>
           <div class="portfolio-metrics">
             <div class="p-metric">
               <div class="p-metric-val">80%</div>
@@ -1649,7 +1824,7 @@
       <div class="testimonial-card featured reveal">
         <div>
           <div class="quote-mark" aria-hidden="true">"</div>
-          <p class="testimonial-text">AscendWorks didn't just implement a platform—they embedded themselves in our operations, understood our upstream complexities, and delivered a solution that our field teams actually use. The 67% reduction in HSE incidents was not just a metric; it was a fundamental shift in how we operate. This is what true enterprise partnership looks like.</p>
+          <p class="testimonial-text">AscendWorks didn't just implement ServiceNow — they transformed how our field operations work. The Agentic AI components now autonomously resolve the vast majority of our IT requests across 47 offshore installations. The 67% reduction in HSE incidents and $120M in annual savings validated our decision. This is what true enterprise AI partnership looks like.</p>
           <div class="testimonial-author">
             <div class="author-avatar" aria-hidden="true">JH</div>
             <div class="author-info">
@@ -1673,7 +1848,7 @@
       <div class="testimonial-card reveal">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <div class="quote-mark" aria-hidden="true" style="font-size:2rem;">"</div>
-        <p class="testimonial-text">In 18 years of enterprise technology implementations, I've never seen a firm match AscendWorks' combination of speed, rigor, and genuine partnership. They delivered our ITSM transformation in four months—on time, on budget, zero surprises.</p>
+        <p class="testimonial-text">In 18 years of enterprise technology, I've never seen a firm match AscendWorks' ServiceNow expertise. They deployed Now Assist across 28,000 users in four months — on time, on budget. AI agents now handle the majority of our L1 requests autonomously. Zero surprises. Exceptional results.</p>
         <div class="testimonial-author">
           <div class="author-avatar" aria-hidden="true">SR</div>
           <div class="author-info">
@@ -1686,7 +1861,7 @@
       <div class="testimonial-card reveal reveal-delay-1">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <div class="quote-mark" aria-hidden="true" style="font-size:2rem;">"</div>
-        <p class="testimonial-text">The team understood our manufacturing environment from day one. No learning curve, no generic templates. They brought industry playbooks that mapped directly to our operational reality and delivered measurable results within the first quarter.</p>
+        <p class="testimonial-text">The team understood our manufacturing environment from day one. They deployed ServiceNow with Workflow Data Fabric connecting our ERP systems in real time across 12 plants — no learning curve, no generic templates. Measurable results in the first quarter. That's rare in enterprise AI.</p>
         <div class="testimonial-author">
           <div class="author-avatar" aria-hidden="true">MK</div>
           <div class="author-info">
@@ -1725,7 +1900,7 @@
       <div class="testimonial-card reveal reveal-delay-1">
         <div class="stars" aria-label="5 out of 5 stars">★★★★★</div>
         <div class="quote-mark" aria-hidden="true" style="font-size:2rem;">"</div>
-        <p class="testimonial-text">The regulatory compliance work AscendWorks delivered has transformed how we approach audit readiness. We went from reactive to proactive—and our regulators have noticed. Exceptional work across a very complex multi-jurisdiction landscape.</p>
+        <p class="testimonial-text">The ServiceNow Risk &amp; Compliance platform AscendWorks built transformed our audit readiness. AI agents now proactively flag compliance anomalies before they become problems. We went from reactive to proactive across 14 jurisdictions — our regulators have noticed. Exceptional work.</p>
         <div class="testimonial-author">
           <div class="author-avatar" aria-hidden="true">AN</div>
           <div class="author-info">
@@ -1799,7 +1974,7 @@
         <span class="section-label reveal">Get in Touch</span>
         <h2 id="contact-heading" class="reveal reveal-delay-1">Ready to Transform<br>Your Enterprise?</h2>
         <p class="reveal reveal-delay-2">
-          Whether you're beginning your digital transformation journey or accelerating an existing initiative, our team is ready to help you achieve measurable outcomes. Share your challenge—we'll build the path forward.
+          Whether you're beginning your ServiceNow journey, deploying Agentic AI, or scaling an existing Now Platform implementation, our team is ready to help you achieve measurable outcomes. Share your challenge — we'll build the path forward.
         </p>
         <div class="reveal reveal-delay-3">
           <div class="contact-detail">
@@ -1917,7 +2092,7 @@
         <a href="#hero" class="nav-logo" aria-label="AscendWorks home">
           <img src="Brand_Assets/AWN2_svg.svg" alt="AscendWorks" />
           </a>
-        <p>Enterprise digital transformation partner for Fortune 1000 organizations across Oil &amp; Gas, Banking, Manufacturing, Media, and Retail.</p>
+        <p>ServiceNow Build Partner. Agentic AI specialists delivering Now Platform transformations for Fortune 1000 organizations across Oil &amp; Gas, Banking, Manufacturing, Media, and Retail.</p>
       </div>
       <div class="footer-col">
         <h4>Services</h4>
